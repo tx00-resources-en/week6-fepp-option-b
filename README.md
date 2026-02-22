@@ -98,7 +98,7 @@ The backend is already built. Here is everything you need to know about it.
 
 ### Iteration 0: Setup
 
-1. Clone [the starter repository](https://github.com/tx00-resources-en/w7-exam-practice-frontend) into a separate folder.
+1. Clone [the starter repository](https://github.com/tx00-resources-en/week6-fepp-option-b) into a separate folder.
    - After cloning, **delete** the `.git` directory so you can start your own Git history (`git init`).
 
 2. **Start the backend:**
