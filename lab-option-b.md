@@ -124,6 +124,8 @@ The backend is already built. Here is everything you need to know about it.
 - The frontend is running on `http://localhost:5173`.
 - You can see the basic UI (Navbar with "Home" and "Add Book" links).
 
+**Commit:** `chore: install dependencies and set up project`
+
 ---
 
 ### Iteration 1: Add a Book (`POST`)
@@ -236,6 +238,8 @@ Right now the form is there but nothing happens when you press "Add Book" — th
 
 > **Note:** The home page does not show books yet — that is the next iteration.
 
+**Commit:** `feat(add-book): send POST request from AddBookPage form`
+
 ---
 
 ### Iteration 2: Fetch and Display All Books (`GET`)
@@ -330,6 +334,8 @@ const BookListing = ({ book }) => {
 - The Home page shows all books from the database, including `publisher` and `genre`.
 - When you add a new book (Iteration 1) and navigate back to Home, the new book appears in the list (the page re-fetches on mount).
 
+**Commit:** `feat(list-books): fetch and display all books on HomePage`
+
 ---
 
 ### Iteration 3: View a Single Book (`GET` one)
@@ -423,6 +429,8 @@ import { Link } from "react-router-dom";
 - You can click a book title on the Home page and see all its details (including `publisher`, `genre`, and `dueDate`) on a dedicated page.
 - The "Back" button returns you to the Home page.
 
+**Commit:** `feat(book-page): add route and fetch single book by id`
+
 **Discussion Questions:**
 
 - What is the difference between a **page** and a **component** in this app?
@@ -476,6 +484,8 @@ The route and the detail page already exist from Iteration 3. You only need to a
 - You click "Delete" on a book detail page.
 - A confirmation dialog appears.
 - After confirming, the app navigates to Home and the deleted book is no longer in the list.
+
+**Commit:** `feat(book-page): add delete button with confirmation dialog`
 
 ---
 
@@ -595,6 +605,8 @@ This is the most complex page. It combines patterns you already used in earlier 
 - The edit form opens with all current values pre-filled, including `publisher`, `genre`, and `dueDate`.
 - After submitting, you are redirected to the detail page showing the updated data.
 - The updated data also appears correctly in the books list on the Home page.
+
+**Commit:** `feat(edit-book): add route and pre-filled edit form with PUT request`
 
 ---
 
@@ -986,6 +998,8 @@ export default Navbar;
 - Clicking "Log out" removes the `user` entry from Local Storage.
 - All CRUD operations (add, list, view, edit, delete books) still work as before.
 
+**Commit:** `feat(auth): add Signup and Login pages with localStorage and Navbar links`
+
 **Discussion Questions:**
 
 - Why do we store the token in `localStorage` instead of React state?
@@ -1302,6 +1316,8 @@ Same pattern as `AddBookPage`. The book object must also include `publisher`, `g
 - **Logged in:** You can add, edit, and delete books (the API accepts the token).
 - **Logged in:** Clicking "Log out" clears the user from `localStorage`, updates the Navbar, and re-applies route protection.
 - Viewing and listing books (GET) still works for everyone — no token needed.
+
+**Commit:** `feat(auth): add route protection, token headers, and conditional rendering`
 
 **Discussion Questions:**
 

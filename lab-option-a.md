@@ -58,6 +58,8 @@ Start the backend (`cd backend`, install dependencies, create `.env` from `.env.
 
 **Done when:** backend is on `http://localhost:4000`, frontend on `http://localhost:5173`, and the basic UI is visible.
 
+**Commit:** `chore: install dependencies and set up project`
+
 ---
 
 ### Iteration 1: Add a Book (`POST`)
@@ -67,6 +69,8 @@ Start the backend (`cd backend`, install dependencies, create `.env` from `.env.
 The form exists but is not wired up. Make it work: use controlled inputs with `useState` for all fields (including `publisher`, `genre`, `dueDate`, `borrower`, and `isAvailable`), send a `POST` request on submit, and navigate to the Home page on success.
 
 **Done when:** filling in the form and submitting saves the book to the database.
+
+**Commit:** `feat(add-book): send POST request from AddBookPage form`
 
 ---
 
@@ -78,6 +82,8 @@ Fetch all books from the API when the Home page mounts and display them. Handle 
 
 **Done when:** the Home page shows all books from the database, including the new fields.
 
+**Commit:** `feat(list-books): fetch and display all books on HomePage`
+
 ---
 
 ### Iteration 3: View a Single Book (`GET`)
@@ -87,6 +93,8 @@ Fetch all books from the API when the Home page mounts and display them. Handle 
 Add a route for `/books/:id`. Link each book title in the list to its detail page. On `BookPage`, fetch the book by ID (from the URL) and display all its fields. Add a "Back" button.
 
 **Done when:** clicking a book title opens a detail page with all its data.
+
+**Commit:** `feat(book-page): add route and fetch single book by id`
 
 ---
 
@@ -98,6 +106,8 @@ Add a "Delete" button to the detail page. Ask the user to confirm before sending
 
 **Done when:** confirming deletion removes the book and returns to the Home page.
 
+**Commit:** `feat(book-page): add delete button with confirmation dialog`
+
 ---
 
 ### Iteration 5: Edit a Book (`PUT`)
@@ -107,6 +117,8 @@ Add a "Delete" button to the detail page. Ask the user to confirm before sending
 Add a route for `/edit-book/:id`. Add an "Edit" button on the detail page that navigates to this route. On `EditBookPage`, fetch the current book data, pre-fill the form, and send a `PUT` request on submit. Include all fields (`publisher`, `genre`, `dueDate`). Navigate to the detail page on success.
 
 **Done when:** the edit form opens pre-filled, and submitting it updates the book in the database.
+
+**Commit:** `feat(edit-book): add route and pre-filled edit form with PUT request`
 
 ---
 
@@ -169,6 +181,8 @@ Build Signup and Login pages with controlled forms that `POST` to the respective
 
 **Done when:** you can sign up, log in, and log out; the JWT is visible in the browser's Local Storage; all CRUD operations still work.
 
+**Commit:** `feat(auth): add Signup and Login pages with localStorage and Navbar links`
+
 ---
 
 ### Iteration 7: Route Protection & Token Headers
@@ -189,6 +203,8 @@ Add `isAuthenticated` state to `App.jsx` (initialised from `localStorage` so it 
 - Unauthenticated users cannot reach add/edit pages and do not see Edit/Delete buttons.
 - Authenticated users can perform all CRUD operations successfully.
 - Logging out clears state, updates the Navbar, and re-applies route protection.
+
+**Commit:** `feat(auth): add route protection, token headers, and conditional rendering`
 
 ---
 
